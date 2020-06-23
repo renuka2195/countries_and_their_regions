@@ -1,0 +1,9 @@
+mat-card {
+    margin-top: 20px;
+    text-align: center;
+}
+
+::ng-deep  mat-card-title {
+    text-align: center;
+}
+
