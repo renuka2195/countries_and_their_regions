@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{country.name}}</mat-card-title>
+    <mat-card-subtitle>{{country.region}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="country.flag" alt="Photo of Country flag">
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>Capital: {{country.capital}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Currencies: <span> </span> <label *ngFor="let currency of country.currencies"> {{currency.code}} <span> , </span> </label> </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Population: {{ country.population | number: '1.0-0' }}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+

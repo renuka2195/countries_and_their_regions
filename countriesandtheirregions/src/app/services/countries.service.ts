@@ -8,9 +8,11 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CountriesService {
+  
 
   headers: any;
   private countries$ = new Subject<Country[]>();
+  private region$ = new Subject<String>();
   private countries: Country[] = [];
   
   constructor(private http: HttpClient) {
@@ -34,6 +36,14 @@ export class CountriesService {
 
   getCountriesObservable(){
     return this.countries$.asObservable();
+  }
+
+  setRegionObservable(region: string) {
+    return this.region$.next(region);
+  }
+
+  getRegionObservable() {
+    return this.region$.asObservable();
   }
 
   getCountryByName(countryName: string){

@@ -1,6 +1,6 @@
 import { Currency } from './currency';
 
-export class Country {
+export interface Country {
     name?: string;
     capital?: string;
     region?: string;

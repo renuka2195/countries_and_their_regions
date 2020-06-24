@@ -4,7 +4,7 @@
   <br>
   <mat-form-field>
     <mat-label>{{labelForDropDown}}</mat-label>
-    <mat-select  ngDefaultControl disableOptionCentering [(ngModel)]="selected" (ngModelChange)="getValues(selected)">
+    <mat-select  ngDefaultControl disableOptionCentering [(ngModel)]="selected" (ngModelChange)="getValues(selected)"  panelClass="myPanelClass">
       <mat-option *ngFor="let val of values" [value]="val.name">{{val.name}}</mat-option>
     </mat-select>
   </mat-form-field>

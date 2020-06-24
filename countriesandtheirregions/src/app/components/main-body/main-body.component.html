@@ -1,0 +1,3 @@
+<app-regions-countries [headerText]="'Region'" [labelForDropDown]="'Select a Region'" [values]="regions" [selectedCategoryText]="'Selected Region is: '"></app-regions-countries>
+<app-regions-countries *ngIf="countries.length>0" [headerText]="'Country'" [labelForDropDown]="'Select a Country'" [values]="countries" [selectedCategoryText]="'Selected Country is: '"></app-regions-countries>
+<app-country-details *ngIf="currentCountry !== undefined" [country]="currentCountry"></app-country-details>

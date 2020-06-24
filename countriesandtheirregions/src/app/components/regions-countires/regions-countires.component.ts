@@ -41,7 +41,7 @@ export class RegionsCountriesComponent implements OnInit {
       });
     }else {
       console.log(region);
-      console.log(this.countriesService.getCountryByName(region));
+      this.countriesService.setRegionObservable(region);
     }
     
   }
